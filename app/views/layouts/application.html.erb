@@ -26,13 +26,13 @@
       <li class="category">Social</li>
       <li><a href="https://www.twitter.com/naterexw" target="_blank">Twitter</a></li>
       <li><a href="https://www.instagram.com/naterexw" target="_blank">Instagram</a></li>
-      <li><a href="https://github.com/naterex" target="_blank">Github</a></li>
-      <li><a href="mailto:nater.welling@gmail.com">Email</a></li>
+      <li><a href="https://github.com/naterexw" target="_blank">Github</a></li>
+      <li><a href="mailto:nate@natewelling.com">Email</a></li>
     </ul>
 
-    <% if !user_signed_in? %>
-      <p class="sign_in">Admin Login</p>
-    <% end %>
+    <%# if !user_signed_in? %>
+      <%#= link_to "Admin Login", new_user_session_path, class: "sign_in" %>
+    <%# end %>
   </div>
 
   <div id="main_content">
@@ -47,7 +47,7 @@
       <% if user_signed_in? %>
         <div class="buttons">
           <button class="button"><%= link_to "New Post", new_post_path %></button>
-          <button class="button">Log Out</button>
+          <button class="button"><%= link_to "Log Out", destroy_user_session_path, method: :delete %></button>
         </div>
       <% end %>
     </div>

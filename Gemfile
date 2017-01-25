@@ -8,11 +8,15 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'devise', '~> 3.5.2'
+# Use postgresql as the database for Active Record
+gem 'pg', '~> 0.15'
+# Use puma for webserver
+gem 'puma'
 
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 group :development, :test do
-  gem 'sqlite3'
+  # gem 'sqlite3'
 end
 
 group :production do
